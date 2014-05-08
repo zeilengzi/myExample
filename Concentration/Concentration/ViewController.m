@@ -78,7 +78,7 @@
         for (int j=0; j<8; j++) {
             origin.y = i*70 + 100;
             origin.x = j * 50 + 100;
-            cardFrame.origin = origin;   //指定一个card的目的位置Frame
+            cardFrame.origin = origin;   //指定一个card的目的位置
             
             // Create the card at the origin，用原点cardOrigin，初始化一个card，索引初始为0的value，后++，
             card = [[CardImageView alloc] initWithFrame:cardOrigin 
@@ -98,7 +98,7 @@
             // Animate moving the cards into position
             // In iOS 4 and later, use the Block-based animation methods.
             //通过UIView属性动画，发牌，（修改card的frame为目的Rect-cardFrame,就会有动画，牌移动到指定位置。
-            [UIView animateWithDuration:0.5 
+            [UIView animateWithDuration:0.5
                                   delay:timeDelay 
                                 options:UIViewAnimationOptionCurveLinear 
                              animations: ^{
@@ -163,7 +163,7 @@
         if (firstTappedView.value == tappedCard.value)
         {
             // Player found a mat
-            // Remove the cards添加一个alpha到0的渐变，这样card消失。，在移除响应view和释放动画，并设置isAnimating
+            // Remove the cards添加一个alpha到0的渐变，这样card消失，再移除view。并设置isAnimating
             [UIView animateWithDuration:1 delay:1
                                 options:UIViewAnimationOptionTransitionNone
                              animations:^{
