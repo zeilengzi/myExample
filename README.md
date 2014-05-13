@@ -15,3 +15,5 @@ Concentration——》 UIView的动画示例。
 		主要是viewControl.m  
 
 
+DownloadTask——》 NSURLSession 下载示例，可以暂停和后台执行。
+		原blog地址：http://blog.csdn.net/jymn_chen/article/details/18939387
